@@ -2,14 +2,14 @@
 <div layout:fragment="content">
     <h2>Article Create</h2>
     <form th:action="@{/article/create}" method="post">
-    <div class="mb-3">
-        <label for="title" class="form-label" >title</label>
-        <input type="text" name="title" class="form-control" id="title">
-    </div>
-    <div class="mb-3">
-        <label for="content" class="form-label" >content</label>
-        <textarea name="content" id="content" class="form-control" cols="30" rows="10"></textarea>
-    </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input type="text" name="title" class="form-control" id="title">
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">content</label>
+            <textarea name="content" id="content" class="form-control" cols="30" rows="10"></textarea>
+        </div>
         <button type="submit" class="btn btn-primary">Article 저장</button>
     </form>
 </div>
