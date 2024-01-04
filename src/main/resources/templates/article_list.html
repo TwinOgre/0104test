@@ -1,0 +1,22 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content">
+    <h2>Article List</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성일자</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        <tr th:each="article, loop : ${articleList}">
+            <th scope="row" th:text="${loop.count}"></th>
+            <td><a th:href="@{|/article/detail/${article.id}|}" th:text="${article.title}"></a></td>
+            <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd')}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/article/create" class="btn btn-primary">Article 작성</a>
+</div>
+</html>
